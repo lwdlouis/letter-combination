@@ -23,7 +23,7 @@ public class DigitLettersList {
     }
 
     /**
-     * Base on Deep First Search
+     * Core algorithm ：Depth-First-Search
      */
     private void doGetCombination(DigitLettersList.Node currentNode, String combinationLetter) {
 
