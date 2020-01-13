@@ -2,7 +2,6 @@ package com.test.lettercombination.service.impl;
 
 
 import com.test.lettercombination.beans.DigitLettersList;
-import com.test.lettercombination.dto.ApiRespDTO;
 import com.test.lettercombination.dto.LetterCombinationsReqDTO;
 import com.test.lettercombination.service.LetterCombinationService;
 import com.test.lettercombination.utils.ConvertUtils;
@@ -25,8 +24,10 @@ public class LetterCombinationServiceImpl implements LetterCombinationService {
     @Override
     public String allLettersCombinations(LetterCombinationsReqDTO reqDTO) {
 
+        // Convert Digit from 0 to 99 into DigitLettersList
         DigitLettersList digitLettersList = ConvertUtils.convertDigit0To99(reqDTO.getInputs(), digitLettersMap);
 
+        // Get all Letter Combinations
         List<String> letterCombinations = digitLettersList.getAllLetterCombinations();
 
         StringBuilder stringBuilder = new StringBuilder();
